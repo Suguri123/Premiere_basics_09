@@ -1557,7 +1557,7 @@ body.dark-theme .user-msg .msg-bubble {
 }
 .carousel-arrow {
     position: absolute;
-    left: -40px;
+    right: -40px;
     top: 50%;
     transform: translateY(-50%);
     background: var(--bg-card);
@@ -1574,6 +1574,10 @@ body.dark-theme .user-msg .msg-bubble {
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     transition: var(--transition);
     z-index: 100;
+}
+.carousel-arrow.to-left {
+    left: -40px;
+    right: auto;
 }
 .carousel-arrow:hover {
     background: var(--primary);
@@ -1597,7 +1601,12 @@ body.dark-theme .user-msg .msg-bubble {
 
 @media (max-width: 1024px) {
     .carousel-arrow {
-        left: 10px;
+        right: 10px;
+        left: auto;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .carousel-arrow.to-left {
+        left: 10px;
+        right: auto;
     }
 }

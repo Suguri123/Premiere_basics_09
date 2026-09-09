@@ -977,21 +977,21 @@ function initVideoCarousel() {
     const toggleBtn = document.getElementById("carousel-toggle-btn");
     if (!track || !toggleBtn) return;
 
-    let currentIndex = 0; // 0 = 3차시 (Slide 1), 1 = 1차시 (Slide 2)
+    let currentIndex = 0; // 0 = 1차시 (Slide 1), 1 = 3차시 (Slide 2)
 
     toggleBtn.addEventListener("click", () => {
         if (currentIndex === 0) {
             currentIndex = 1;
             track.style.transform = "translateX(-50%)";
-            toggleBtn.innerHTML = "▶";
-            toggleBtn.style.left = "auto";
-            toggleBtn.style.right = "-40px";
+            toggleBtn.innerHTML = "◀";
+            toggleBtn.classList.add("to-left");
+            toggleBtn.title = "1차시 실습 영상 보기";
         } else {
             currentIndex = 0;
             track.style.transform = "translateX(0%)";
-            toggleBtn.innerHTML = "◀";
-            toggleBtn.style.left = "-40px";
-            toggleBtn.style.right = "auto";
+            toggleBtn.innerHTML = "▶";
+            toggleBtn.classList.remove("to-left");
+            toggleBtn.title = "3차시 실습 영상 보기";
         }
     });
 }
