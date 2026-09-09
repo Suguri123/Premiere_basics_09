@@ -166,10 +166,15 @@ body.dark-theme .btn-outline:hover {
     cursor: pointer;
     transition: var(--transition);
 }
-.sub-nav-item:hover {
+.sub-nav-item:hover:not(:disabled) {
     background: var(--bg-card-soft);
     color: var(--secondary);
     transform: translateX(2px);
+}
+.sub-nav-item:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
 }
 .sidebar-footer {
     padding-top: 16px;
