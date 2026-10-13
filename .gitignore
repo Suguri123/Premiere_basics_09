@@ -6,3 +6,5 @@ user_inputs_last_*.txt
 .agents/
 # 대용량 실습 소스는 GitHub Releases로 배포
 files/*.zip
+# 강의 슬라이드는 비공개 (강사 보관용)
+files/slides/
